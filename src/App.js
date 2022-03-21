@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -12,11 +12,9 @@ function App() {
   ];*/
   return (
     <div className="App">
-      <Counter></Counter>
-
-
-
-      {/*{
+      <ExternalUsers></ExternalUsers>
+      {/*<Counter></Counter>
+      {
         products.map(product => <Product name={product.name} price={product.price}></Product>)
       }
       {nayoks.map(nayok => <Person name={nayok}></Person>)}
@@ -30,8 +28,19 @@ function App() {
     </div>
   );
 }
-
-function Counter(){
+function ExternalUsers(props) {
+  const [users, setUsers] = useState([]);
+  useEffect( ()=>{
+    
+  } , []);
+  return(
+    <div>
+      <h1></h1>
+      <p></p>
+    </div>
+  );
+}
+/*function Counter(){
   const [count, setCount] = useState(55);
   const increaseCount = () =>setCount(count + 1);
   const decreaseCount = () =>setCount(count - 1);
@@ -44,7 +53,7 @@ function Counter(){
   );
 }
 
-/*function Product(props){
+function Product(props){
   return(
     <div className='product'>
       <h1>Brand: {props.name}</h1>
