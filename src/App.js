@@ -33,14 +33,13 @@ function App() {
 
 function Counter(){
   const [count, setCount] = useState(55);
-  const increaseCount = () =>{
-    const newCount = count + 1;
-    setCount(newCount);
-  }
+  const increaseCount = () =>setCount(count + 1);
+  const decreaseCount = () =>setCount(count - 1);
   return (
     <div>
       <h1>Count: {count}</h1>
       <button type='submit' onClick={increaseCount}>Increase</button>
+      <button type='submit' onClick={decreaseCount}>Decrease</button>
     </div>
   );
 }
